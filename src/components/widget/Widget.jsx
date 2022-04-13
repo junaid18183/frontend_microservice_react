@@ -13,11 +13,11 @@ const Widget = ({ type }) => {
   const diff = 20;
 
   switch (type) {
-    case "user":
+    case "products":
       data = {
-        title: "USERS",
+        title: "Products",
         isMoney: false,
-        link: "See all users",
+        link: "See all Prodcuts",
         icon: (
           <PersonOutlinedIcon
             className="icon"
@@ -29,11 +29,11 @@ const Widget = ({ type }) => {
         ),
       };
       break;
-    case "order":
+    case "shipments":
       data = {
-        title: "ORDERS",
+        title: "Shipments",
         isMoney: false,
-        link: "View all orders",
+        link: "View all Shipments",
         icon: (
           <ShoppingCartOutlinedIcon
             className="icon"
