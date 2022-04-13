@@ -6,21 +6,15 @@ import "./product.scss";
 
 
 const Product = () => {
-  const [setProducts] = [];
-  const getProducts = async () => {
-    try {
-      const res = await axios.get("api/products/1");
-      setProducts(res.data);
-    } catch (err) {}
-  };
-  const rows = getProducts();
   return (
     <div className="product">
       <Sidebar />
       <div className="productContainer">
         <Navbar />
-        {rows}
-        {/* <Table /> */}
+        <div className="title">
+        Products
+        </div>
+        <Table type="product"/>
       </div>
     </div>
   );
