@@ -1,19 +1,19 @@
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
-import "./home.scss";
+import "./product.scss";
 
-const Home = () => {
+const Product = () => {
   return (
-    <div className="home">
+    <div className="product">
       <Sidebar />
-      <div className="homeContainer">
+      <div className="productContainer">
         <Navbar />
         <div className="widgets">
-        Home
+        Product
         </div>
       </div>
     </div>
   );
 };
 
-export default Home;
+export default Product;

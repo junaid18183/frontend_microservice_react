@@ -43,7 +43,7 @@ const Sidebar = () => {
             </li>
           </Link>
 
-          <Link to="/users" style={{ textDecoration: "none" }}>
+          <Link to="/shipments" style={{ textDecoration: "none" }}>
             <li>
               <PersonOutlineIcon className="icon" />
               <span>Shipments</span>
