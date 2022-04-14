@@ -12,5 +12,4 @@ COPY --chown=node:node . .
 RUN npm run build
 
 FROM nginx:1.21.4
-COPY --from=builder /build/build/ /usr/share/nginx/html/
-# This doc folder is copied from backend to frontend in ci before docker build.
+COPY --from=builder /build/build/ /etc/nginx/html/
