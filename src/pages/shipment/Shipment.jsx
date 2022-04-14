@@ -13,17 +13,17 @@ import "./shipment.scss";
 
 
 const Shipment = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  // const [isLoading, setIsLoading] = useState(true);
   const [shipments, setShipments] = useState([]);
 
   useEffect(() => {
     const getShipments = async () => {
-      setIsLoading(true);
+      // setIsLoading(true);
       try {
         const res = await axios.get("/api/shipments");
         setShipments(res.data);
       } catch (err) {}
-      setIsLoading(false);
+      // setIsLoading(false);
     };
     getShipments();
   }, []);

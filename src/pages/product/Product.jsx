@@ -13,17 +13,17 @@ import "./product.scss";
 
 
 const Product = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  // const [isLoading, setIsLoading] = useState(true);
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     const getProducts = async () => {
-      setIsLoading(true);
+      // setIsLoading(true);
       try {
         const res = await axios.get("/api/products");
         setProducts(res.data);
       } catch (err) {}
-      setIsLoading(false);
+      // setIsLoading(false);
     };
     getProducts();
   }, []);
