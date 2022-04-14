@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import Table from "@mui/material/Table";
@@ -7,12 +8,25 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import axios from "axios";
 import "./product.scss";
-let data;
-const { products } = require("./fakeProductData");
-data = products
+
 
 const Product = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const getProducts = async () => {
+      setIsLoading(true);
+      try {
+        const res = await axios.get("/api/products");
+        setProducts(res.data);
+      } catch (err) {}
+      setIsLoading(false);
+    };
+    getProducts();
+  }, []);
   return (
     <div className="product">
       <Sidebar />
@@ -36,7 +50,7 @@ const Product = () => {
         </TableRow>
       </TableHead>
       <TableBody>
-        {data.map((row) => (
+        {products.map((row) => (
           <TableRow key={row.id}>
             <TableCell className="tableCell">{row.name}</TableCell>
             <TableCell className="tableCell">{row.desc}</TableCell>
