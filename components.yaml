@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sample-app-frontend
+  description: sample-app-frontend
+  labels:
+    example.com/custom: custom_label_value
+  annotations:
+    example.com/service-discovery: frontend
+    circleci.com/project-slug: github.com/junaid18183/frontend_microservice_react
+  tags:
+    - java
+  links:
+    - url: https://resume.ijuned.com
+      title: Admin Dashboard
+      icon: dashboard
+spec:
+  type: website
+  lifecycle: production
+  owner: frontend-team
+  system: public-websites
