@@ -8,8 +8,9 @@ metadata:
   annotations:
     example.com/service-discovery: frontend
     circleci.com/project-slug: github.com/junaid18183/frontend_microservice_react
+    backstage.io/techdocs-ref: ./README.md
   tags:
-    - java
+    - react
   links:
     - url: https://resume.ijuned.com
       title: Admin Dashboard
