@@ -8,6 +8,7 @@ metadata:
   annotations:
     example.com/service-discovery: frontend
     circleci.com/project-slug: github.com/junaid18183/frontend_microservice_react
+    github.com/project-slug: 'junaid18183/frontend_microservice_react'
 #     backstage.io/techdocs-ref: ./README.md
   tags:
     - react
